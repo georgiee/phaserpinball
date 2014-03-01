@@ -1,0 +1,34 @@
+@import 'compass/typography/text/replacement';
+@import "compass/css3";
+@import "susy";
+
+@mixin input-placeholder-color($color){
+  &.placeholder{color: $color}
+  &:-moz-placeholder{color: $color}
+  &::-webkit-input-placeholder{color: $color}
+}
+
+//adjust anchor so it fits parent format
+@mixin clear_anchor{
+  color: inherit;
+  text-decoration: none;
+}
+
+//stretch background to full width
+@mixin fitBackground{
+  background-repeat: no-repeat;
+  background-position: center center fixed;
+  @include background-size(100%);
+}
+
+//based on compass pre populated variables
+@function emToPx($to-size,$from-size: $base-font-size){
+  @return  1em * $to-size / $from-size;
+}
+
+@mixin placeholder_style {
+  &.placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+}

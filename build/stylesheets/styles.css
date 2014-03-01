@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "FrutigerLTW01-77BlackCn";
+  src: url("frutiger/frutiger.eot?#iefix");
+  src: url("../fonts/frutiger/frutiger.eot?#iefix") format("eot"), url("../fonts/frutiger/frutiger.woff") format("woff"), url("../fonts/frutiger/frutiger.ttf") format("truetype"), url("../fonts/frutiger/frutiger.svg#b010e56e-44d2-46cd-a494-22825e86adec") format("svg"); }
+
+@font-face {
+  font-family: "Myriad W01 Cnd";
+  src: url("../fonts/myriad-condensed/myriad-condensed.eot?#iefix");
+  src: url("../fonts/myriad-condensed/myriad-condensed.eot?#iefix") format("eot"), url("../fonts/myriad-condensed/myriad-condensed.woff") format("woff"), url("../fonts/myriad-condensed/myriad-condensed.ttf") format("truetype"), url("../fonts/myriad-condensed/myriad-condensed.svg#42f31449-1991-4ca6-bb98-9e924d681719") format("svg"); }
+
+@font-face {
+  font-family: "MyriadW08-BoldCondensed 1166610";
+  src: url("../fonts/myriad/myriad.eot?#iefix");
+  src: url("../fonts/myriad/myriad.eot?#iefix") format("eot"), url("../fonts/myriad/myriad.woff") format("woff"), url("../fonts/myriad/myriad.ttf") format("truetype"), url("../fonts/myriad/myriad.svg#8d0144af-935c-4c51-91b9-2869eab1289e") format("svg"); }
+
+/* line 4, /Users/george/job/2014/pinball/protoypes/phaserpinball/source/stylesheets/styles.css.scss */
+body {
+  background-color: #000;
+  color: #fff; }
+
+/* line 8, /Users/george/job/2014/pinball/protoypes/phaserpinball/source/stylesheets/styles.css.scss */
+a {
+  color: inherit; }

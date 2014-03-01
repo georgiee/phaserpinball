@@ -1,0 +1,43 @@
+@font-face{
+font-family:"FrutigerLTW01-77BlackCn";
+src:url("frutiger/frutiger.eot?#iefix");
+src:url(font-path("frutiger/frutiger.eot?#iefix")) format("eot"),
+    url(font-path("frutiger/frutiger.woff")) format("woff"),
+    url(font-path("frutiger/frutiger.ttf")) format("truetype"),
+    url(font-path("frutiger/frutiger.svg#b010e56e-44d2-46cd-a494-22825e86adec")) format("svg");
+}
+@font-face{
+font-family:"Myriad W01 Cnd";
+src:url(font-path("myriad-condensed/myriad-condensed.eot?#iefix"));
+src:url(font-path("myriad-condensed/myriad-condensed.eot?#iefix")) format("eot"),
+    url(font-path("myriad-condensed/myriad-condensed.woff")) format("woff"),
+    url(font-path("myriad-condensed/myriad-condensed.ttf")) format("truetype"),
+    url(font-path("myriad-condensed/myriad-condensed.svg#42f31449-1991-4ca6-bb98-9e924d681719")) format("svg");
+}
+
+@font-face{
+font-family:"MyriadW08-BoldCondensed 1166610";
+src:url(font-path("myriad/myriad.eot?#iefix"));
+src:url(font-path("myriad/myriad.eot?#iefix")) format("eot"),
+    url(font-path("myriad/myriad.woff")) format("woff"),
+    url(font-path("myriad/myriad.ttf")) format("truetype"),
+    url(font-path("myriad/myriad.svg#8d0144af-935c-4c51-91b9-2869eab1289e")) format("svg");
+}
+@mixin frutiger-blackcn{
+  font-family:"FrutigerLTW01-77BlackCn";
+}
+@mixin myriad-condensed{
+  font-family:"Myriad W01 Cnd";
+}
+@mixin myriad-condensed-bold{
+  font-family:"MyriadW08-BoldCondensed 1166610";
+  letter-spacing: 0.0325em;
+}
+
+@mixin arial{
+  font-family: Arial, Helvetica, sans-serif;
+}
+@mixin arial-bold{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight:bold;
+}
