@@ -4,6 +4,9 @@ This demo includes a custom debug drawer for the physics copied & dervived from 
 p2: https://github.com/schteppe/p2.js
 phaser: https://github.com/georgiee/phaser
 
+See folder ./build for a compiled example
+This proejct is based on static page generator middleman http://middlemanapp.com/
+
 ## Usage
   + Key Z & X for the flippers
   + Click to palce a circle or rectangle anywhere 
