@@ -55796,7 +55796,6 @@ Phaser.Physics.Body.prototype = {
         {
             var temp = [];
 
-            data = data.pop()
             //  We've a list of numbers
             for (var i = 0, len = data.shape.length; i < len; i += 2)
             {
