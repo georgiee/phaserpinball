@@ -1,7 +1,7 @@
 class window.PinballPhysics extends Phaser.Group
   constructor: (game)->
     super(game)
-    @physicsWorld = @game.physics.world
+    @physicsWorld = @game.physics.p2.world
 
     @build()
     @registerKeys()
@@ -45,7 +45,10 @@ class window.PinballPhysics extends Phaser.Group
     
   createTable: ->
     table = @create(@game.world.width/2,@game.world.height/2,'table')
-    table.physicsEnabled = true;
+    table.alpha = 0.5
+    @game.physics.enable(table, Phaser.Physics.P2, true)
+    #better for convenience: table.enable(Phaser.Physics.P2)
+
     table.body.clearShapes();
     table.body.loadPolygon('pinball', 'table');
     table.body.collideWorldBounds = false;
@@ -55,13 +58,19 @@ class window.PinballPhysics extends Phaser.Group
   
   createBall: ->
     ball = @create(250,500, 'ball')
-    ball.physicsEnabled = true;
+    #ball.physicsEnabled = true;
+    @game.physics.enable(ball, Phaser.Physics.P2, true)
+    #ball.body.debug = true
+
+    console.log('@game.physics.body.debug', ball.body.debug)
+
     ball.body.setCircle(20);
     ball
 
   createFlipperLeft: ->
     flipper = @create(0, 0,'flipperLeft')
-    flipper.physicsEnabled = true
+    @game.physics.enable(flipper, Phaser.Physics.P2, true)
+
     flipper.body.clearShapes()
     flipper.body.loadPolygon('pinball','flipper_left')
 
@@ -74,7 +83,7 @@ class window.PinballPhysics extends Phaser.Group
 
   createFlipperRight: ->
     flipper = @create(0, 0,'flipperRight')
-    flipper.physicsEnabled = true
+    @game.physics.enable(flipper, Phaser.Physics.P2, true)
     flipper.body.clearShapes()
     flipper.body.loadPolygon('pinball','flipper_right')
 

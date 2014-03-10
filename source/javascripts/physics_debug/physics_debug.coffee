@@ -15,7 +15,7 @@ class Phaser.Utils.PhysicsDebug extends Phaser.Group
     @init()
   
   init: ->
-    @physicsWorld = @game.physics.world;
+    @physicsWorld = @game.physics.p2.world;
     @physicsWorld.on("addBody", (e)=> @registerBody(e.body))
     @physicsWorld.on("removedBody", (e)=> @removeBody(e.body))
 

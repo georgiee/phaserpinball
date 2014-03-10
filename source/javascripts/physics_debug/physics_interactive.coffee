@@ -4,7 +4,7 @@ class Phaser.Utils.PhysicsInteractive
   constructor: (game, drawer)->
     @game = game
     @drawer = drawer
-    @physicsWorld = game.physics.world
+    @physicsWorld = game.physics.p2.world
 
     @init()
   init: ->

@@ -1,4 +1,4 @@
-class Phaser.Utils.PhysicsItem extends Phaser.Group
+class Phaser.Utils.PhysicsItem2 extends Phaser.Group
   settings:
     pixelsPerLengthUnit : 20
     debugPolygons: true
