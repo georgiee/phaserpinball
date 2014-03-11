@@ -7,14 +7,9 @@ states=
     game.load.image('flipperRight', 'assets/flipper_right.png');
 
   create: ->
-    game.physics.startSystem(Phaser.Physics.P2);
+    game.physics.startSystem(Phaser.Physics.BOX2D);
     
-    game.physics.p2.gravity.y = 1000;
-    game.physics.p2.friction = 0.5;
-    
-    pinball = new PinballPhysics(@game)
-
-    #physicsDebug = new Phaser.Utils.PhysicsDebug(@game)
-    #game.world.add(physicsDebug)
+    ball = game.add.sprite(100,100,'ball')
+    game.physics.enable(ball, Phaser.Physics.BOX2D, true)
 
 game = new Phaser.Game(768, 1024, Phaser.CANVAS, 'pinball', states) 
