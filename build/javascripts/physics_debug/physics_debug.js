@@ -18,7 +18,7 @@
 
     PhysicsDebug.prototype.init = function() {
       var _this = this;
-      this.physicsWorld = this.game.physics.world;
+      this.physicsWorld = this.game.physics.p2.world;
       this.physicsWorld.on("addBody", function(e) {
         return _this.registerBody(e.body);
       });

@@ -6,7 +6,7 @@
       this.handlePointerDown = __bind(this.handlePointerDown, this);
       this.game = game;
       this.drawer = drawer;
-      this.physicsWorld = game.physics.world;
+      this.physicsWorld = game.physics.p2.world;
       this.init();
     }
 

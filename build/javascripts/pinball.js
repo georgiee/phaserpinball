@@ -7,7 +7,7 @@
 
     function PinballPhysics(game) {
       PinballPhysics.__super__.constructor.call(this, game);
-      this.physicsWorld = this.game.physics.world;
+      this.physicsWorld = this.game.physics.p2.world;
       this.build();
       this.registerKeys();
     }
@@ -57,7 +57,8 @@
     PinballPhysics.prototype.createTable = function() {
       var table;
       table = this.create(this.game.world.width / 2, this.game.world.height / 2, 'table');
-      table.physicsEnabled = true;
+      table.alpha = 0.5;
+      this.game.physics.enable(table, Phaser.Physics.P2, true);
       table.body.clearShapes();
       table.body.loadPolygon('pinball', 'table');
       table.body.collideWorldBounds = false;
@@ -68,7 +69,8 @@
     PinballPhysics.prototype.createBall = function() {
       var ball;
       ball = this.create(250, 500, 'ball');
-      ball.physicsEnabled = true;
+      this.game.physics.enable(ball, Phaser.Physics.P2, true);
+      console.log('@game.physics.body.debug', ball.body.debug);
       ball.body.setCircle(20);
       return ball;
     };
@@ -76,7 +78,7 @@
     PinballPhysics.prototype.createFlipperLeft = function() {
       var flipper, pivotA, pivotB;
       flipper = this.create(0, 0, 'flipperLeft');
-      flipper.physicsEnabled = true;
+      this.game.physics.enable(flipper, Phaser.Physics.P2, true);
       flipper.body.clearShapes();
       flipper.body.loadPolygon('pinball', 'flipper_left');
       pivotA = [this.game.math.px2p(flipper.width / 2 - 30), this.game.math.px2p(10)];
@@ -88,7 +90,7 @@
     PinballPhysics.prototype.createFlipperRight = function() {
       var flipper, pivotA, pivotB;
       flipper = this.create(0, 0, 'flipperRight');
-      flipper.physicsEnabled = true;
+      this.game.physics.enable(flipper, Phaser.Physics.P2, true);
       flipper.body.clearShapes();
       flipper.body.loadPolygon('pinball', 'flipper_right');
       pivotA = [-this.game.math.px2p(flipper.width / 2 - 30), this.game.math.px2p(10)];
